@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  </head>
+  <body>
+    <div class="profile-view">
+      <div class="profile-back">
+        <div class="back-icon-container">
+          <button>
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M28.1333 4.79998C27.9397 4.60597 27.7099 4.45204 27.4567 4.34702C27.2036 4.24199 26.9323 4.18793 26.6583 4.18793C26.3842 4.18793 26.1129 4.24199 25.8598 4.34702C25.6067 4.45204 25.3768 4.60597 25.1833 4.79998L11.1666 18.8167C11.0121 18.9708 10.8895 19.154 10.8059 19.3556C10.7222 19.5572 10.6792 19.7734 10.6792 19.9917C10.6792 20.2099 10.7222 20.4261 10.8059 20.6277C10.8895 20.8293 11.0121 21.0125 11.1666 21.1667L25.1833 35.1833C25.9999 36 27.3166 36 28.1333 35.1833C28.9499 34.3667 28.9499 33.05 28.1333 32.2333L15.8999 20L28.1499 7.74998C28.9499 6.93332 28.9499 5.61665 28.1333 4.79998Z"
+                fill="black"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="profile-name poppins-medium fz20">Adriaan Daan</div>
+      <div class="profile-photo">
+        <div class="photo-container">
+          <a href="#">
+            <img src="assets/svg/gg_bee.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="period-selectors">
+      <div class="weekely active">
+        <button type="button" class="active">Weekly</button>
+      </div>
+      <div class="monthly">
+        <button type="button">Monthly</button>
+      </div>
+      <div class="yearly">
+        <button type="button">Yearly</button>
+      </div>
+    </div>
+
+    <div class="charts-container">
+      <section class="relax-index-chart">
+        <div class="chart-title poppins-semibold fz18">
+          Relax Index or Estimation Relaxation
+        </div>
+
+        <div class="chart">
+          <canvas id="relaxChart" width="20" height="10"></canvas>
+        </div>
+ 
+        <div class="chart-details-btn">
+          <a href="#">Explanation</a>
+        </div>
+      </section>
+
+      <section class="lifestyle-habit-chart">
+        <div class="chart-title poppins-semibold fz18">
+          Lifestyle Habits & Stress Factors
+        </div>
+
+        <div class="chart">
+          <canvas id="lifeChart" width="20" height="10"></canvas>
+        </div>
+
+        <div class="chart-details-btn">
+          <a href="#">Details</a>
+        </div>
+      </section>
+
+      <section class="self-relfection-chart">
+        <div class="chart-title poppins-semibold fz18">Self Reflection</div>
+
+        <div class="chart">
+          <canvas id="selfChart" width="20" height="10"></canvas>
+        </div>
+
+        <div class="chart-details-btn">
+          <a href="#">Details</a>
+        </div>
+      </section>
+    </div>
+
+    <div class="footer-nav">
+      <nav class="nav">
+        <ul class="nav__list poppins-medium">
+          <li class="nav__item nav__item_selected">
+            <a href="#">
+              <!-- <img src="assets/svg/dashboard.svg" alt="Dashboard Icon" class="> -->
+              <svg
+                class="nav_item_svg"
+                width="40"
+                height="41"
+                viewBox="0 0 40 41"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.6667 15.5V5.5H35V15.5H21.6667ZM5 22.1667V5.5H18.3333V22.1667H5ZM21.6667 35.5V18.8333H35V35.5H21.6667ZM5 35.5V25.5H18.3333V35.5H5Z"
+                  fill="black"
+                />
+              </svg>
+
+              <div class="nav_item_title">Dashboard</div>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#">
+              <!-- <img src="assets/svg/pencil-ruler.svg" alt="Measures Icon" class=""> -->
+              <svg
+                class="nav_item_svg"
+                width="40"
+                height="41"
+                viewBox="0 0 40 41"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4.99998 29.25V35.5H11.25L29.6833 17.05L23.4333 10.8L4.99998 29.25ZM37.6833 31.1L30.6 38.1833L21.9333 29.5167L24.8833 26.5666L26.55 28.2333L30.6667 24.1L33.0333 26.4666L30.6 28.8333L32.3667 30.5L34.7333 28.1666L37.6833 31.1ZM11.0167 18.55L2.31665 9.89998L9.39998 2.81665L12.3333 5.76665L8.21665 9.89998L9.99998 11.6667L14.1 7.53332L16.4666 9.89998L14.1 12.25L15.7666 13.9167L11.0167 18.55ZM34.5166 12.1667C35.1666 11.5167 35.1666 10.5 34.5166 9.81665L30.6167 5.98332C30 5.33332 28.9166 5.33332 28.2666 5.98332L25.2 9.03332L31.45 15.2833L34.5166 12.1667Z"
+                  fill="black"
+                />
+              </svg>
+
+              <div class="nav_item_title">Measures</div>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#">
+              <!-- <img src="assets/svg/graph-bar.svg" alt="Results Icon" class=""> -->
+              <svg
+                class="nav_item_svg"
+                width="40"
+                height="41"
+                viewBox="0 0 40 41"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M36.6666 35.5H3.33325V5.5H6.66659V32.1667H9.99992V17.1667H16.6666V32.1667H19.9999V10.5H26.6666V32.1667H29.9999V23.8333H36.6666V35.5Z"
+                  fill="black"
+                />
+              </svg>
+
+              <div class="nav_item_title">Results</div>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#">
+              <!-- <img src="assets/svg/setting.svg" alt="Settings Icon" class=""> -->
+
+              <svg
+                class="nav_item_svg"
+                width="40"
+                height="41"
+                viewBox="0 0 40 41"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <mask
+                  id="mask0_75_158"
+                  style="mask-type: luminance"
+                  maskUnits="userSpaceOnUse"
+                  x="1"
+                  y="1"
+                  width="38"
+                  height="39"
+                >
+                  <path
+                    d="M30.5716 13.1425C31.6343 14.6648 32.3534 16.3998 32.6791 18.2275H36.6666V22.7725H32.6791C32.3534 24.6002 31.6343 26.3353 30.5716 27.8575L33.3924 30.6784L30.1783 33.8925L27.3574 31.0717C25.8352 32.1344 24.1001 32.8535 22.2724 33.1792V37.1667H17.7274V33.1792C15.8997 32.8535 14.1647 32.1344 12.6424 31.0717L9.82159 33.8925L6.60742 30.6784L9.42825 27.8575C8.36553 26.3353 7.64643 24.6002 7.32075 22.7725H3.33325V18.2275H7.32075C7.64643 16.3998 8.36553 14.6648 9.42825 13.1425L6.60742 10.3217L9.82159 7.10754L12.6424 9.92837C14.1647 8.86566 15.8997 8.14655 17.7274 7.82087V3.83337H22.2724V7.82087C24.1001 8.14655 25.8352 8.86566 27.3574 9.92837L30.1783 7.10754L33.3924 10.3217L30.5716 13.1425Z"
+                    fill="white"
+                    stroke="white"
+                    stroke-width="4"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M19.9999 24.6667C21.105 24.6667 22.1648 24.2277 22.9462 23.4463C23.7276 22.6649 24.1666 21.6051 24.1666 20.5C24.1666 19.395 23.7276 18.3352 22.9462 17.5538C22.1648 16.7724 21.105 16.3334 19.9999 16.3334C18.8948 16.3334 17.835 16.7724 17.0536 17.5538C16.2722 18.3352 15.8333 19.395 15.8333 20.5C15.8333 21.6051 16.2722 22.6649 17.0536 23.4463C17.835 24.2277 18.8948 24.6667 19.9999 24.6667Z"
+                    fill="black"
+                    stroke="black"
+                    stroke-width="4"
+                    stroke-linejoin="round"
+                  />
+                </mask>
+                <g mask="url(#mask0_75_158)">
+                  <path d="M0 0.5H40V40.5H0V0.5Z" fill="black" />
+                </g>
+              </svg>
+
+              <div class="nav_item_title">Settings</div>
+            </a>
+          </li>
+          <!-- <li class="nav__item"><a href="#">Measures</a></li>
+                    <li class="nav__item"><a href="#">Results</a></li>
+                    <li class="nav__item"><a href="#">Settings</a></li> -->
+        </ul>
+      </nav>
+    </div>
+
+    <script>
+
+        function generateRandomData() {
+            const data = [];
+            for (let i = 0; i < 7; i++) {
+            data.push(Math.floor(Math.random() * (30 - 5 + 1)) + 5);
+            }
+            return data;
+        }
+        const randData = generateRandomData();
+        const randData2 = generateRandomData();
+      // Data for the chart
+      const labels = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
+      const data = {
+        labels: labels,
+        datasets: [
+          {
+            label: "X",
+            backgroundColor: "rgba(0, 0, 0, 0.2)",
+            borderColor: "rgba(0, 0, 0, 1)",
+            data: randData,
+          },
+          {
+            label: "Y",
+            backgroundColor: "rgba(58, 57, 60, 0.2)",
+            borderColor: "rgba(58, 57, 60, 1)",
+            data: randData2,
+          },
+        ],
+      };
+
+      // Configure and create the chart
+      const relaxChart = document.getElementById("relaxChart").getContext("2d");
+      const lifeChart = document.getElementById("lifeChart").getContext("2d");
+      const selfChart = document.getElementById("selfChart").getContext("2d");
+
+      const relaxChartPlot = new Chart(relaxChart, {
+        type: "line", // Set chart type as line
+        data: data,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: false
+                    }
+                },
+            scales: {
+                x: {
+                grid: {
+                display: false
+                     }
+                    },
+                y: {
+                beginAtZero: true,
+                grid: {
+                display: false
+                     }
+                }
+            }
+        }
+      });
+
+      const lifeChartPlot = new Chart(lifeChart, {
+        type: "line", // Set chart type as line
+        data: data,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: false
+                    }
+                },
+            scales: {
+                x: {
+                grid: {
+                display: false
+                     }
+                    },
+                y: {
+                beginAtZero: true,
+                grid: {
+                display: false
+                     }
+                }
+            }
+        }
+      });
+
+      const selfChartPlot = new Chart(selfChart, {
+        type: "line", // Set chart type as line
+        data: data,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: false
+                    }
+                },
+            scales: {
+                x: {
+                grid: {
+                display: false
+                     }
+                    },
+                y: {
+                beginAtZero: true,
+                grid: {
+                display: false
+                     }
+                }
+            }
+        }
+      });
+      
+    </script>
+  </body>
+</html>
